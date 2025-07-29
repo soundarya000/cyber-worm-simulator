@@ -1,0 +1,85 @@
+.learning-panel {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  transform: translateX(100%);
+  width: clamp(280px, 30vw, 400px);
+  height: auto;
+  max-height: calc(100vh - 150px);
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #67e8f9;
+  padding: 1.2rem;
+  border-left: 4px solid #22d3ee;
+  box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.6);
+  font-family: "Courier New", monospace;
+  transition: transform 0.5s ease;
+  z-index: 1000;
+}
+
+.learning-panel h3 {
+  animation: pulseGlow 1.8s infinite alternate;
+  text-shadow: 0 0 10px #083447, 0 0 20px #021016, 0 0 30px #b9bbbc;
+}
+
+@keyframes pulseGlow {
+  0% {
+    color: #0c191e;
+    text-shadow: 0 0 5px #c3d5dc;
+  }
+  100% {
+    color: #bec2c3;
+    text-shadow: 0 0 15px #38bdf8, 0 0 30px #0ea5e9, 0 0 45px #0ea5e9;
+  }
+}
+.learning-panel.active {
+  transform: translateX(0);
+}
+
+.learning-panel h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #919597;
+  border-bottom: 1px solid #475569;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #334155;
+  animation: pulseGlow 1.8s infinite alternate;
+  text-shadow: 0 0 10px #38bdf8, 0 0 20px #0ea5e9, 0 0 30px #0ea5e9;
+
+}
+
+.learning-panel p {
+  margin: 0.6rem 0;
+  line-height: 1.5;
+}
+.learning-panel p em {
+  display: inline-block;
+  overflow: hidden;
+  white-space: normal;
+  border-right: 2px solid #38bdf8;
+  animation: typing 2.5s steps(80, end), blink 0.75s step-end infinite;
+  max-width: 100%;
+  width: fit-content;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+@keyframes softType {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.learning-panel p em {
+  animation: softType 0.5s ease-in-out;
+}

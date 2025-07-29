@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  line-height: 1.6;
+}
+
+/* Container Layout */
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Title Styling */
+.animated-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #38bdf8;
+  animation: pulse 2s infinite ease-in-out;
+  font-family: "Orbitron", monospace;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.03); }
+}
+
+/* Toggle Checkboxes */
+.toggle {
+  margin: 1.5rem auto;
+  text-align: center;
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+.toggle input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.controls button {
+  background-color: #0ea5e9;
+  color: #f9fafb;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.controls button:hover {
+  background-color: #0284c7;
+}
+
+.controls button:disabled {
+  background-color: #334155;
+  cursor: not-allowed;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 10px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1.5rem auto;
+  max-width: 600px;
+}
+
+.progress-bar .fill {
+  height: 100%;
+  background: #22d3ee;
+  transition: width 0.5s ease;
+}
+
+/* File Node (optional) */
+.file-node {
+  font-family: "Courier New", monospace;
+  margin: 4px 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.file-node.infected {
+  background-color: #dc262633;
+  border-left: 4px solid #dc2626;
+}
+
+.file-node:hover {
+  background-color: #1e293b;
+}
+.alert-banner {
+  text-align: center;
+  background: #dc2626;
+  color: #fff;
+  padding: 0.75rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  animation: pulseBanner 1.5s infinite alternate;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #dc2626;
+}
+
+@keyframes pulseBanner {
+  0% { opacity: 0.85; }
+  100% { opacity: 1; transform: scale(1.01); }
+}
